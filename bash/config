@@ -40,6 +40,9 @@ BWHITE='\e[47m'
 
 # Update the command prompt to be <user>:<current_directory>(git_branch) >
 # Note that the git branch is given a special color
-PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] \[\e[1;37m\]$(parse_git_branch)$(parse_git_modified)\[\e[0;92m\]$(parse_git_added)\[\e[0;91m\]$(parse_git_deleted)\[\e[0m\]$(parse_git_branch_close)'
+PS1='\[\e[0;32m\]\u\[\e[m\]:\[\e[1;34m\]\w\[\e[m\]\[\e[1;32m\] \[\e[1;37m\]$(parse_git_branch)\[\e[0;92m\]$(parse_git_added)\[\e[0;91m\]$(parse_git_deleted)\[\e[0m\]$(parse_git_branch_close)\$\[\e[m\] '
 
-#PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '
+# Test PS1s to mess around with
+# PS1='\[\e[0;32m\]\u\[\e[m\]:\[\e[1;34m\]\w\[\e[m\]\[\e[1;32m\] \[\e[1;37m\]$(__git_ps1 " (%s)") \$ '
+# PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+# PS1='\[\e[1;32m\][\u@\h \W]\$\[\e[0m\] '

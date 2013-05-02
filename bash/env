@@ -1,5 +1,7 @@
 # Set PATH, CDPATH, EDITOR, etc.
 
+export ANT_HOME=/Users/mmay/dev/social/voldemort/3rdparty/apache-ant-1.7.0
+export PATH=$PATH:$ANT_HOME/bin
 export PATH="${PATH}:/usr/local/bin"
 export PATH=$PATH:~/bin
 export PATH="${PATH}:${HOME}/.gem/ruby/1.8/bin"
@@ -10,3 +12,10 @@ export BACON='/Users/Michael/workspace/Baconalytics'
 export LESS=-R
 export EDITOR=/usr/bin/vim
 export M2_HOME=/usr/share/maven
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/bin
+export PATH="${PATH}:/Users/mmay/dev/lib/apache-maven-2.2.1/bin"
+export MAVEN_OPTS='-Xms256m -Xmx1024m -XX:+CMSClassUnloadingEnabled -XX:PermSize=64M -XX:MaxPermSize=128M -Dfile.encoding=UTF-8'
+export M2_HOME=/Users/mmay/dev/lib/apache-maven-2.2.1
+export PLATFORM='mac'
+
