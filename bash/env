@@ -1,31 +1,32 @@
 # Set PATH, CDPATH, EDITOR, etc.
-
 export PLATFORM='mac'
 export LESS=-R
-export EDITOR=/usr/bin/vim
+export EDITOR=vim
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
-# export PATH=$PATH:$HOME/.gem/ruby/1.8/bin
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home"
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home"
 export PATH=$PATH:/usr/local/bin
 PATH=$PATH:~/bin
-PATH=$PATH:$HOME/dev/lib/chromedriver
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:$HOME/bin
+export PATH="${PATH}:/usr/local/share/npm/bin"
 
 # Maven 2.2 support for HA projects
 # Override system maven:
 # export M2_HOME=/usr/share/maven
-export MAVEN_OPTS='-Xms256m -Xmx1024m -XX:+CMSClassUnloadingEnabled -XX:PermSize=64M -XX:MaxPermSize=128M -Dfile.encoding=UTF-8'
-export M2_HOME=/Users/mmay/dev/lib/apache-maven-2.2.1
-PATH=$PATH:$M2_HOME/bin
+# export MAVEN_OPTS='-Xms256m -Xmx1024m -XX:+CMSClassUnloadingEnabled -XX:PermSize=64M -XX:MaxPermSize=128M -Dfile.encoding=UTF-8'
+# export M2_HOME=/Users/mmay/dev/lib/apache-maven-2.2.1
+# PATH=$PATH:$M2_HOME/bin
 
-export JRUBY_OPTS="-J-XX:MaxPermSize=512m -J-Xmx4096m -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-Xverify:none"
+# export JRUBY_OPTS="-J-XX:MaxPermSize=512m -J-Xmx4096m -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-Xverify:none"
 
 # Override system ant:
-export ANT_OPTS="-Xms256m -Xmx1224m -XX:+CMSClassUnloadingEnabled -XX:PermSize=64M -XX:MaxPermSize=1800M"
-export ANT_HOME=/Users/mmay/dev/social/voldemort/3rdparty/apache-ant-1.7.0
-PATH=$PATH:$ANT_HOME/bin
+# export ANT_OPTS="-Xms256m -Xmx1224m -XX:+CMSClassUnloadingEnabled -XX:PermSize=64M -XX:MaxPermSize=1800M"
+# export ANT_HOME=/Users/mmay/dev/social/voldemort/3rdparty/apache-ant-1.7.0
+# PATH=$PATH:$ANT_HOME/bin
 
 # Drip config - for speeding up jruby load time
-export JAVACMD=`which drip`
-export DRIP_INIT_CLASS=org.jruby.main.DripMain
+# export JAVACMD=`which drip`
+# export DRIP_INIT_CLASS=org.jruby.main.DripMain

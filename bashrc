@@ -1,5 +1,8 @@
-. ~/bin/dotfiles/bash/env
-. ~/bin/dotfiles/bash/config
-. ~/bin/dotfiles/bash/aliases
-. ~/bin/dotfiles/bash/git_prompt
-. ~/bin/dotfiles/bash/git-prompt.sh
+. ~/.dotfiles/bash/env
+. ~/.dotfiles/bash/config
+. ~/.dotfiles/bash/aliases
+. ~/.dotfiles/bash/git_prompt
+. ~/.dotfiles/bash/git-prompt.sh
+. ~/.dotfiles/bash/git-completion.bash
+__git_complete gco _git_checkout
+__git_complete gp _git_push
