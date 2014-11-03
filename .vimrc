@@ -4,37 +4,62 @@ call pathogen#helptags()
 syntax on
 filetype plugin indent on
 
-" makes vim behave in a more useful way (the default) than the vi-compatible manner
-set nocompatible
+" color setup
+colorscheme Tomorrow-Night-Eighties
 
-" automatically reload files when changed on disk without prompting
-set autoread
+set encoding=utf-8
+set nocompatible " makes vim behave in a more useful way (the default) than the vi-compatible manner
+set autoread     " automatically reload files when changed on disk without prompting
+set hidden       " can put buffer to the background without writing to disk, will remember history/marks.
+set lazyredraw   " don't update the display while executing macros, speed boost
+set ttyfast      " Send more characters at a given time."
+set autowrite       " Automatically save before commands like :next and :make"
 
-set hidden                  " can put buffer to the background without writing to disk, will remember history/marks.
-set lazyredraw              " don't update the display while executing macros, speed boost
-set ttyfast                 " Send more characters at a given time."
+" gui stuff
+set number
+set ruler
+set colorcolumn=80
+
+" Whitespace stuff
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set list listchars=tab:\ \ ,trail:·
 
 " I save all the time, those are annoying and unnecessary...
 set nobackup
 set nowritebackup
 set noswapfile
+set history=200 " remember more Ex commands
 
-set colorcolumn=80
+" no backup directory
+set nobackup
+set nowritebackup
 
-set history=200 " remember more Ex commands"
+" Status bar
+set laststatus=2
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Show (partial) command in the status line
+set showcmd
+
+" unset zsh as the shell, RVM reason?
+set shell=bash
+
+set splitbelow
+set splitright
+
 
 " Open current buffer in a new split
 noremap <leader>s <C-w>v<C-w>l
 noremap <leader>i <C-w>s<C-w>j
-
-set autowrite       " Automatically save before commands like :next and :make"
-
-" Set encoding
-set encoding=utf-8
-
-" gui stuff
-set number
-set ruler
 
 " Without setting this, ZoomWin restores windows in a way that causes
 " equalalways behavior to be triggered the next time CommandT is used.
@@ -44,22 +69,15 @@ set noequalalways
 " leader key change
 let mapleader=","
 
+" map :w save to Enter
+nmap <CR> :write!<CR>
+cabbrev w nope
+
 " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
         \| exe "normal g'\"" | endif
 endif
-
-" color setup
-colorscheme Tomorrow-Night-Eighties
-
-" Whitespace stuff
-" set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set list listchars=tab:\ \ ,trail:·
 
 " toggle absolute line numbers
 let g:NumberToggleTrigger="<F2>"
@@ -82,10 +100,6 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   au BufNewFile,BufRead *.less set filetype=css
 endif
 
-" no backup directory
-set nobackup
-set nowritebackup
-
 " ctrl-p config
 let g:ctrlp_map = '<Leader>t'
 " let g:ctrlp_cmd = 'CtrlPMRU'
@@ -104,7 +118,6 @@ map <leader>tl :CtrlP lib<cr>
 map <leader>tj :CtrlP app/assets/javascripts<cr>
 map <leader>ts :CtrlP spec<cr>
 map <leader>tf :CtrlP config<cr>
-
 
 " font
 " set gfn=Menlo:h12
@@ -126,20 +139,6 @@ map <Leader>rt :!ctags --languages=Ruby,JavaScript,HTML --exclude=.git --exclude
 map <C-\> :tnext<CR>
 set iskeyword+=?,!
 
-" Status bar
-set laststatus=2
-
-" Searching
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-
-" Show (partial) command in the status line
-set showcmd
-
-" unset zsh as the shell, RVM reason?
-set shell=bash
 
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
@@ -225,9 +224,6 @@ nmap <silent> <leader>tw :set invwrap<CR>:set wrap?<CR>
 " find merge conflict markers
 nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>
 
-set splitbelow
-set splitright
-
 " remove scrollbar
 au WinEnter * setlocal cursorline
 au WinLeave * setlocal nocursorline
@@ -270,13 +266,10 @@ nnoremap <c-\> <c-w>v<c-]>zvzz " Use c-\ to do c-] but open it in a new split.
 
 ":autocmd FileType mail :nmap <F8> :w<CR>:!aspell -e -c %<CR>:e<CR>
 
-" map :w save to Enter
-nmap <CR> :write!<CR>
-cabbrev w nope
-
 " remap NERDTree keys, cuz defaults are shit
 let g:NERDTreeMapOpenSplit = 's'
 let g:NERDTreeMapOpenVSplit = 'v'
 
-" make ruby files load faster?
-let g:ruby_path = system('rvm current')
+" disable a bunch of vim-go bullshit
+let g:go_disable_autoinstall = 1
+

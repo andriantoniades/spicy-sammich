@@ -1,20 +1,20 @@
-# Set default PATH, EDITOR, and other ENVs
-export EDITOR=vim
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LESS=-R # raw less output (colors)
-export GOROOT=/usr/local/go
-export GOPATH=/usr/local/go
-export PLATFORM='mac'
+# bash_profile 
+set keymap vi
 
-export PATH=$PATH:/usr/local/bin
-PATH=$PATH:$HOME/bin
-export PATH=$PATH:/usr/local/share/npm/bin # npm wtf
+# load bashrc if it exists
+if [ -f ~/.bashrc ];
+then
+    source ~/.bashrc
+fi
 
-LESSHISTFILE=- # no less history file
+# Infinite bash history
+HISTFILESIZE=""
 
-# Eternal bash history
+# rbenv setup
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# Eternal bash history.
 # ---------------------
 # Undocumented feature which sets the size to "unlimited".
 # http://stackoverflow.com/questions/9457233/unlimited-bash-history
@@ -27,3 +27,4 @@ export HISTFILE=~/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
