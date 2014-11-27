@@ -1,0 +1,4 @@
+#! /bin/bash
+
+rm ~/.bash*
+rm ~/.vim*
