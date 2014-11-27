@@ -6,3 +6,4 @@
 . ~/.config/bash/git-completion.bash
 __git_complete gco _git_checkout
 __git_complete gp _git_push
+__git_complete gb _git_branch

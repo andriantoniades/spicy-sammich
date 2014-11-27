@@ -1,0 +1,8 @@
+#! /bin/bash
+
+mv spicy-sammich/ ./config
+ln -s ~/.config/bash_profile ~/.bash_profile
+ln -s ~/.config/bashrc ~/.bashrc
+ln -s ~/.config/vim ~/.vim
+ln -s ~/.config/vimrc ~/.vimrc
+source .bashrc

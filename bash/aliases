@@ -10,14 +10,13 @@ alias hello='echo Hello Michael, the time is `date`'
 alias hist='history'
 alias k9='killall -9'
 alias md='mkdir -p'
-alias cdd='cd -'
+alias b='cd -'
 alias cl='clear; l'
 alias e='exit'
 alias ta='tmux attach -t'
 alias tl='tmux ls'
 alias tc='tmux new -s'
 alias tu='top -o cpu'
-alias vim='mvim -v'
 
 ### Git
 alias g='git status'
@@ -39,23 +38,16 @@ alias h='heroku'
 alias ha='heroku addons'
 alias hconf='heroku config'
 alias hlog='heroku logs -t'
-alias hcon='heroku run console'
-alias kensafuck='~/code/mmay/kensa/bin/kensa'
+alias hc='heroku run console'
 
 ### Quick Movement
-alias sumo='cd ~/code/fastly/cdn_sumo'
-alias sierra='cd ~/code/fastly/Sierra'
-alias ns='cd ~/code/fastly/Northstar'
-alias mammoth='cd ~/code/fastly/mammoth'
+alias derp='cd ~/path/to/somewhere'
 
 ### Application Shortcuts
 alias be='bundle exec'
-alias pg-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias r='rake'
 alias rc='rails c'
 alias rs='rails s'
-alias s='cd ..'
 alias spec='rspec'
 
 ### Quick edit bash configs

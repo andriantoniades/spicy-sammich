@@ -1,18 +1,10 @@
-#! bin/bash
-
 # spicy sammich
+mmmm....tasty
 
 ### dev setup
-
-run in home dir
+clone and run the boostrap script from home dir
 
 ```shell
 git clone git@github.com:mmay/spicy-sammich.git
-bin/bootstrap
+/.config/bin/bootstrap
 ```
-
-mv spicy-sammich/ ./config
-cp ./config/bashrc ../.bashrc
-
-
-
