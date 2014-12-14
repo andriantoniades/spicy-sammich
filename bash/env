@@ -7,8 +7,10 @@ export LESS=-R # raw less output (colors)
 export GOROOT=/usr/local/go
 export GOPATH=/usr/local/go
 export PLATFORM='mac'
-
 export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/bin
+export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=/code/go_appengine:$PATH
 
 LESSHISTFILE=- # no less history file
 
