@@ -44,17 +44,21 @@ alias hc='heroku run console'
 alias derp='cd ~/path/to/somewhere'
 
 ### Application Shortcuts
+alias b='bundle'
 alias be='bundle exec'
 alias r='rake'
+alias rt='rake test'
+alias rtu='rake test:units'
+alias rti='rake test:integration'
 alias rc='rails c'
 alias rs='rails s'
 alias spec='rspec'
 
 ### Quick edit bash configs
-alias ea='vim ~/.dotfiles/bash/aliases'
-alias ee='vim ~/.dotfiles/bash/env'
+alias ea='vim ~/.config/bash/aliases'
+alias ee='vim ~/.config/bash/env'
 alias eg='vim .git/cofig'
-alias ua='alias > ~/.dotfiles/bash/aliases'
+alias ua='alias > ~/.config/bash/aliases'
 alias reload='source ~/.bashrc'
-alias ra='. ~/.dotfiles/bash/aliases'
+alias ra='. ~/.config/bash/aliases'
 

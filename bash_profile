@@ -13,7 +13,6 @@ shopt -s histappend
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 
-# rbenv setup
-export PATH="$HOME/.rbenv/bin:$PATH"
+# rbenv setup to enable shims and autocompletion
 eval "$(rbenv init -)"
 
