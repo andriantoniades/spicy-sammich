@@ -13,19 +13,19 @@ set autoread     " automatically reload files when changed on disk without promp
 set hidden       " can put buffer to the background without writing to disk, will remember history/marks.
 set lazyredraw   " don't update the display while executing macros, speed boost
 set ttyfast      " Send more characters at a given time."
-set autowrite       " Automatically save before commands like :next and :make"
+set autowrite    " Automatically save before commands like :next and :make"
 
 " gui stuff
 set number
 set ruler
 set colorcolumn=80
 
-" Whitespace stuff
+" whitespace stuff
 set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+" expandtab
 set list listchars=tab:\ \ ,trail:·
 
 " I save all the time, those are annoying and unnecessary...
@@ -273,3 +273,10 @@ let g:NERDTreeMapOpenVSplit = 'v'
 " disable a bunch of vim-go bullshit
 let g:go_disable_autoinstall = 1
 
+" Some Linux distributions set filetype in /etc/vimrc.
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+ filetype off
+ filetype plugin indent off
+ set runtimepath+=$GOROOT/misc/vim
+ filetype plugin indent on
+ syntax on

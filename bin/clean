@@ -1,4 +1,5 @@
 #! /bin/bash
 
-rm ~/.bash*
-rm ~/.vim*
+rm -r ~/.bash*
+rm -r ~/.vim*
+rm -r ~/.tmux*

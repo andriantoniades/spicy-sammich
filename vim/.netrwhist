@@ -1,3 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/mmay/dev/social/profiles'
+let g:netrw_dirhist_2='/Users/mmay/.config'
+let g:netrw_dirhist_3='/Users/mmay/.config/bash'
+let g:netrw_dirhist_4='/Users/mmay/code/gowiki'
+let g:netrw_dirhist_5='/Users/mmay/.tmux'
+let g:netrw_dirhist_6='/Users/mmay/.config/tmux/tmux-powerline'
+let g:netrw_dirhist_7='/Users/mmay/.config/tmux/tmux-powerline/themes'
+let g:netrw_dirhist_8='/Users/mmay/.config/tmux/tmux-powerline/segments'
