@@ -58,7 +58,11 @@ alias derp='cd ~/path/to/somewhere'
 alias b='bundle'
 alias be='bundle exec'
 alias r='rake'
-alias rt='rake test'
+alias rt='be rake test'
+testone() {
+  bundle exec rake test TEST=$1
+}
+alias rto=testone
 alias rtu='rake test:units'
 alias rti='rake test:integration'
 alias rc='rails c'
